@@ -10,7 +10,7 @@ Este programa busca crear un sistema a través de python por el cual archivos qu
 Instrucciones para correr el programa
 
 Descargar el archivo y correr en terminal con:
-python file archive.py
+
 o abrir en Thonny y dar botón de play.
 
 Para esto se solicitará como parte del Demo que se introduzca una serie de datos relacionados a asignaturas o trabajos personales los cuales serán clasificados como archivos y el programa los organizará, permitiendo al usuario usar la herramienta de clasificación al introducir una palabra o más que permitan al sistema lanzar una respuesta.
