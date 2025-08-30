@@ -47,19 +47,19 @@ val_4 valor númerico, val_5 valor númerico
 resta 5 a cada valor
 devuelve: los valores ordenados de acuerdo a que tan grande es el número final
 """
-return 5 - val_1
+return para_resta - val_1
 
 def evalua_resta(para_resta, val_2)
-return 5 - val_2
+return para_resta - val_2
 
 def evalua_resta(para_resta, val_3)
-return 5 - val_3
+return para_resta - val_3
 
 def evalua_resta(para_resta, val_4)
-return 5 - val_4
+return para_resta - val_4
 
-def evalua_resta(5, val_5)
-return 5 - val_5}
+def evalua_resta(para_resta, val_5)
+return para_resta - val_5}
 
 """
 Dependiendo del valor de la resta, se clasificará el archivo como "reciente", "hace un rato",
@@ -74,7 +74,7 @@ devuelve: reciente
 
 if resultado_de_resta = < 3
 print("antiguo2")
-if resultado_de_resta = ==3
+if resultado_de_resta = == 3
 print("hace un rato")
 if resultado_de_resta = > 3
 print("reciente")
