@@ -55,11 +55,11 @@ print(nombre_de_archivo)
 """
 para_resta = 5
 
-val_1 = input("Por favor escriba el nombre de su primer archivo: ")
-val_2 = input("Por favor escriba el nombre de su segundo archivo: ")
-val_3 = input("Por favor escriba el nombre de su tercer archivo: ")
-val_4 = input("Por favor escriba el nombre de su cuarto archivo: ")
-val_5 = input("Por favor escriba el nombre de su quinto archivo: ")
+val_1_ = input("Por favor escriba el nombre de su primer archivo: ")
+val_2_ = input("Por favor escriba el nombre de su segundo archivo: ")
+val_3_ = input("Por favor escriba el nombre de su tercer archivo: ")
+val_4_ = input("Por favor escriba el nombre de su cuarto archivo: ")
+val_5_ = input("Por favor escriba el nombre de su quinto archivo: ")
 
 val_1 = 1
 val_2 = 2
@@ -85,18 +85,26 @@ devuelve: los valores ordenados de acuerdo a que tan grande es el número final
 def evalua_resta(para_resta, val_2):
     resultado2 = para_resta - val_2
     return resultado2
+      
+print(evalua_resta(5, 2))
 
 def evalua_resta(para_resta, val_3):
     resultado3 = para_resta - val_3
     return resultado3
+      
+print(evalua_resta(5, 3))
 
 def evalua_resta(para_resta, val_4):
     resultado4 = para_resta - val_4
     return resultado4
+      
+print(evalua_resta(5, 4))
 
 def evalua_resta(para_resta, val_5):
     resultado5 = para_resta - val_5
     return resultado5
+      
+print(evalua_resta(5, 5))
 
 """
 Dependiendo del valor de la resta, se clasificará el archivo como "reciente", "hace un rato",
@@ -109,10 +117,10 @@ x > 3
 devuelve: reciente
 """
 
-if resultado_de_resta = < 3
+"""if resultado_de_resta = < 3    #On hold, es un ejemplo
 print("antiguo")
 if resultado_de_resta = == 3
 print("hace un rato")
 if resultado_de_resta = > 3
-print("reciente")
+print("reciente")"""
 
