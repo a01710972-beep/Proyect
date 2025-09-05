@@ -10,6 +10,8 @@ de los 3 métodos existentes.
 """
 #bibliotecas
 
+print("Hola, buen día, hoy filtraremos tus archivos por ti :)")
+
 """
 ================= Funciones de filtrado por metodo alfabetico =================
 """
@@ -19,10 +21,25 @@ recibe: val_1 valor string, val_2 valor string, val_3 valor string.
 val_4 valor string, val_5 valor string
 devuelve: lista de elementos por orden alfabetico
 """
+print("Aquí esta su lista por orden alfabético:" )
+      
+
+"""if val_1  ---       #Aun no se como ponerle que filtre por letra inicial, I'll figure it out eventually
+print(val_1)
+if val_1  ---
+print(val_2)
+if val_1  ---
+print(val_3)
+if val_1  ---
+print(val_4)
+if val_1  ---
+print(val_5)
+"""
 
 """
 ================= Funciones de filtrado por tema =================
 """
+print("Aquí esta su lista por tema": )
 """
 Tomando el tipo de archivo, estos se classificarán de acuerdo a este
 recibe: val_1 valor string, val_2 valor string, val_3 valor string.
@@ -36,9 +53,27 @@ print(nombre_de_archivo)
 """
 ================= Funciones de filtrado por tiempo (números) =================
 """
-
 para_resta = 5
-def evalua_resta(para_resta, val_1)
+
+val_1 = input("Por favor escriba el nombre de su primer archivo: ")
+val_2 = input("Por favor escriba el nombre de su segundo archivo: ")
+val_3 = input("Por favor escriba el nombre de su tercer archivo: ")
+val_4 = input("Por favor escriba el nombre de su cuarto archivo: ")
+val_5 = input("Por favor escriba el nombre de su quinto archivo: ")
+
+val_1 = 1
+val_2 = 2
+val_3 = 3
+val_4 = 4
+val_5 = 5
+
+print("Aquí esta su lista por tiempo")
+
+def evalua_resta(para_resta, val_1):
+    resultado1 = para_resta - val_1
+    return resultado1
+
+print(evalua_resta(5, 1))
 """
 A los datos que el usuario introduzca se les asigna un valor numérico.
 (uso de operadores)
@@ -47,19 +82,21 @@ val_4 valor númerico, val_5 valor númerico
 resta 5 a cada valor
 devuelve: los valores ordenados de acuerdo a que tan grande es el número final
 """
-return para_resta - val_1
+def evalua_resta(para_resta, val_2):
+    resultado2 = para_resta - val_2
+    return resultado2
 
-def evalua_resta(para_resta, val_2)
-return para_resta - val_2
+def evalua_resta(para_resta, val_3):
+    resultado3 = para_resta - val_3
+    return resultado3
 
-def evalua_resta(para_resta, val_3)
-return para_resta - val_3
+def evalua_resta(para_resta, val_4):
+    resultado4 = para_resta - val_4
+    return resultado4
 
-def evalua_resta(para_resta, val_4)
-return para_resta - val_4
-
-def evalua_resta(para_resta, val_5)
-return para_resta - val_5}
+def evalua_resta(para_resta, val_5):
+    resultado5 = para_resta - val_5
+    return resultado5
 
 """
 Dependiendo del valor de la resta, se clasificará el archivo como "reciente", "hace un rato",
@@ -73,12 +110,9 @@ devuelve: reciente
 """
 
 if resultado_de_resta = < 3
-print("antiguo2")
+print("antiguo")
 if resultado_de_resta = == 3
 print("hace un rato")
 if resultado_de_resta = > 3
 print("reciente")
 
-"""
-============ parte principal ===========
-"""
