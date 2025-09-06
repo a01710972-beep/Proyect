@@ -39,7 +39,7 @@ print(val_5)
 """
 ================= Funciones de filtrado por tema =================
 """
-print("Aquí esta su lista por tema": )
+print("Aquí esta su lista por tema:" )
 """
 Tomando el tipo de archivo, estos se classificarán de acuerdo a este
 recibe: val_1 valor string, val_2 valor string, val_3 valor string.
@@ -67,7 +67,7 @@ val_3 = 3
 val_4 = 4
 val_5 = 5
 
-print("Aquí esta su lista por tiempo")
+print("Aquí esta su lista por tiempo:")
 
 def evalua_resta(para_resta, val_1):
     resultado1 = para_resta - val_1
