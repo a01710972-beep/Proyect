@@ -116,6 +116,16 @@ devuelve: hace un rato
 x > 3
 devuelve: reciente
 """
+if val_1 < 3:
+    print(val_1_, "antiguo")
+if val_2 < 3:
+    print(val_2_, "antiguo")
+if val_3 == 3:
+    print(val_3_, "hace un rato")
+if val_4 > 3:
+    print(val_4_, "reciente")
+if val_5 > 3:
+    print(val_5_, "reciente")
 
 """if resultado_de_resta = < 3    #On hold, es un ejemplo
 print("antiguo")
