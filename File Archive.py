@@ -72,8 +72,6 @@ print("Aquí esta su lista por tiempo:")
 def evalua_resta(para_resta, val_1):
     resultado1 = para_resta - val_1
     return resultado1
-
-print(evalua_resta(5, 1))
 """
 A los datos que el usuario introduzca se les asigna un valor numérico.
 (uso de operadores)
@@ -85,26 +83,18 @@ devuelve: los valores ordenados de acuerdo a que tan grande es el número final
 def evalua_resta(para_resta, val_2):
     resultado2 = para_resta - val_2
     return resultado2
-      
-print(evalua_resta(5, 2))
 
 def evalua_resta(para_resta, val_3):
     resultado3 = para_resta - val_3
     return resultado3
-      
-print(evalua_resta(5, 3))
 
 def evalua_resta(para_resta, val_4):
     resultado4 = para_resta - val_4
-    return resultado4
-      
-print(evalua_resta(5, 4))
+    return resultado4    
 
 def evalua_resta(para_resta, val_5):
     resultado5 = para_resta - val_5
     return resultado5
-      
-print(evalua_resta(5, 5))
 
 """
 Dependiendo del valor de la resta, se clasificará el archivo como "reciente", "hace un rato",
@@ -123,9 +113,9 @@ AZUL = '\033[34m'
 VERDE = '\033[32m'
 RESET = '\033[0m'
 if val_1 < 3:
-    print(val_1_, f"{ROJO}antigo{RESET}")
+    print(val_1_, f"{ROJO}antiguo{RESET}")
 if val_2 < 3:
-    print(val_2_, f"{ROJO}antigo{RESET}")
+    print(val_2_, f"{ROJO}antiguo{RESET}")
 if val_3 == 3:
     print(val_3_, f"{AZUL}hace un rato{RESET}")
 if val_4 > 3:
