@@ -116,21 +116,19 @@ devuelve: hace un rato
 x > 3
 devuelve: reciente
 """
+#NOTA!!!!
+#En la siguiente parte solo investigue como ponerle color al texto, no afecta en nada al programa más allá de darle color al texto
+ROJO = '\033[31m'
+AZUL = '\033[34m'
+VERDE = '\033[32m'
+RESET = '\033[0m'
 if val_1 < 3:
-    print(val_1_, "antiguo")
+    print(val_1_, f"{ROJO}antigo{RESET}")
 if val_2 < 3:
-    print(val_2_, "antiguo")
+    print(val_2_, f"{ROJO}antigo{RESET}")
 if val_3 == 3:
-    print(val_3_, "hace un rato")
+    print(val_3_, f"{AZUL}hace un rato{RESET}")
 if val_4 > 3:
-    print(val_4_, "reciente")
+    print(val_4_, f"{VERDE}reciente{RESET}")
 if val_5 > 3:
-    print(val_5_, "reciente")
-
-"""if resultado_de_resta = < 3    #On hold, es un ejemplo
-print("antiguo")
-if resultado_de_resta = == 3
-print("hace un rato")
-if resultado_de_resta = > 3
-print("reciente")"""
-
+    print(val_5_, f"{VERDE}reciente{RESET}")
