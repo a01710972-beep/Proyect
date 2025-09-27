@@ -92,19 +92,19 @@ val_4 valor númerico, val_5 valor númerico
 resta 5 a cada valor
 devuelve: los valores ordenados de acuerdo a que tan grande es el número final
 """
-def evalua_resta(para_resta, val_2):
+def evalua_resta1(para_resta, val_2):
     resultado2 = para_resta - val_2
     return resultado2
 
-def evalua_resta(para_resta, val_3):
+def evalua_resta2(para_resta, val_3):
     resultado3 = para_resta - val_3
     return resultado3
 
-def evalua_resta(para_resta, val_4):
+def evalua_resta3(para_resta, val_4):
     resultado4 = para_resta - val_4
     return resultado4    
 
-def evalua_resta(para_resta, val_5):
+def evalua_resta4(para_resta, val_5):
     resultado5 = para_resta - val_5
     return resultado5
 
