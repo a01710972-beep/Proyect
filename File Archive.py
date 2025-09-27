@@ -37,7 +37,9 @@ recibe: val_1 valor string, val_2 valor string, val_3 valor string.
 val_4 valor string, val_5 valor string
 devuelve: lista de elementos por orden alfabetico
 """
-print("Aquí esta su lista por orden alfabético:" )
+while metodo == 1:  
+    print("Aquí esta su lista por orden alfabético:" )
+    break
       
 
 """if val_1  ---       #Aun no se como ponerle que filtre por letra inicial, I'll figure it out eventually
@@ -55,7 +57,9 @@ print(val_5)
 """
 ================= Funciones de filtrado por tema =================
 """
-print("Aquí esta su lista por tema:" )
+while metodo == 2:  
+    print("Aquí esta su lista por tema:" )
+    break
 """
 Tomando el tipo de archivo, estos se classificarán de acuerdo a este
 recibe: val_1 valor string, val_2 valor string, val_3 valor string.
@@ -76,8 +80,6 @@ val_2 = 2
 val_3 = 3
 val_4 = 4
 val_5 = 5
-
-print("Aquí esta su lista por tiempo:")
 
 def evalua_resta(para_resta, val_1):
     resultado1 = para_resta - val_1
@@ -124,6 +126,8 @@ VERDE = '\033[32m'
 RESET = '\033[0m'
 
 while metodo == 3:
+    print("Aquí esta su lista por tiempo:")
+    
     if val_1 < 3:
         print(val_1_, f"{ROJO}antiguo{RESET}")
     if val_2 < 3:
@@ -148,7 +152,7 @@ while ans not in ["Y","y","N","n"]:
 
 if ans in ["N","n"]:
     print("Gracias por usar el programa, adiós.")
-
+   
 elif ans in ["Y","y"]:
     metodo = 0
     while metodo == 0:
