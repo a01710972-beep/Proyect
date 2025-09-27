@@ -12,6 +12,22 @@ de los 3 métodos existentes.
 
 print("Hola, buen día, hoy filtraremos tus archivos por ti :)")
 
+val_1_ = input("Por favor escriba el nombre de su primer archivo: ")
+val_2_ = input("Por favor escriba el nombre de su segundo archivo: ")
+val_3_ = input("Por favor escriba el nombre de su tercer archivo: ")
+val_4_ = input("Por favor escriba el nombre de su cuarto archivo: ")
+val_5_ = input("Por favor escriba el nombre de su quinto archivo: ")
+
+print("Elige el número de método por el cual quieres que organizemos tus archivos, las opciones son las siguientes:")
+lista = ("(1) Orden Alfabético", "(2) Orden por tema", "(3) Orden por tiempo")
+for i in lista:
+    print(i)
+    
+metodo = int(input())
+while metodo not in [1,2,3]:
+    print("No es una opción valida, por favor intente de nuevo")
+    metodo = int(input())
+
 """
 ================= Funciones de filtrado por metodo alfabetico =================
 """
@@ -54,12 +70,6 @@ print(nombre_de_archivo)
 ================= Funciones de filtrado por tiempo (números) =================
 """
 para_resta = 5
-
-val_1_ = input("Por favor escriba el nombre de su primer archivo: ")
-val_2_ = input("Por favor escriba el nombre de su segundo archivo: ")
-val_3_ = input("Por favor escriba el nombre de su tercer archivo: ")
-val_4_ = input("Por favor escriba el nombre de su cuarto archivo: ")
-val_5_ = input("Por favor escriba el nombre de su quinto archivo: ")
 
 val_1 = 1
 val_2 = 2
@@ -112,13 +122,39 @@ ROJO = '\033[31m'
 AZUL = '\033[34m'
 VERDE = '\033[32m'
 RESET = '\033[0m'
-if val_1 < 3:
-    print(val_1_, f"{ROJO}antiguo{RESET}")
-if val_2 < 3:
-    print(val_2_, f"{ROJO}antiguo{RESET}")
-if val_3 == 3:
-    print(val_3_, f"{AZUL}hace un rato{RESET}")
-if val_4 > 3:
-    print(val_4_, f"{VERDE}reciente{RESET}")
-if val_5 > 3:
-    print(val_5_, f"{VERDE}reciente{RESET}")
+
+while metodo == 3:
+    if val_1 < 3:
+        print(val_1_, f"{ROJO}antiguo{RESET}")
+    if val_2 < 3:
+        print(val_2_, f"{ROJO}antiguo{RESET}")
+    if val_3 == 3:
+        print(val_3_, f"{AZUL}hace un rato{RESET}")
+    if val_4 > 3:
+        print(val_4_, f"{VERDE}reciente{RESET}")
+    if val_5 > 3:
+        print(val_5_, f"{VERDE}reciente{RESET}")
+    break
+"""
+======================================================================================================
+"""
+
+
+print("Desea intentar organizar sus archivos por otro método? Y/N")
+ans = input("Y/N? ")
+
+while ans not in ["Y","y","N","n"]:
+    ans = input("Lo siento, no entendimos tu respuesta, favor de intentar de nuevo con una respuesta de Y/N: ")
+
+if ans in ["N","n"]:
+    print("Gracias por usar el programa, adiós.")
+
+elif ans in ["Y","y"]:
+    metodo = 0
+    while metodo == 0:
+        metodo = int(input("¿Qué método desea utilizar esta vez? (1), (2), o (3)? "))
+        if metodo in [1,2,3]:
+            print("Lo sentimos, esta acción aun no esta disponible, esperamos que esta caracteristica este disponible en nuestro siguinte parche, gracias por su comprensión :)")       
+        elif metodo not in [1,2,3]:
+            print("No se ha seleccionado una opción valida. Favor de intentar de nuevo.")
+            metodo = metodo * 0
