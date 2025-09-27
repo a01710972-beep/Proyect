@@ -163,7 +163,7 @@ elif ans in ["Y","y"]:
     while metodo == 0:
         metodo = int(input("¿Qué método desea utilizar esta vez? (1), (2), o (3)? "))
         if metodo in [1,2,3]:
-            print("Lo sentimos, esta acción aun no esta disponible, esperamos que esta caracteristica este disponible en nuestro siguinte parche, gracias por su comprensión :)")       
+            print("Lo sentimos, esta acción aun no esta disponible, esperamos que esta caracteristica este disponible en nuestro siguiente parche, gracias por su comprensión :)")       
         elif metodo not in [1,2,3]:
             print("No se ha seleccionado una opción valida. Favor de intentar de nuevo.")
             metodo = metodo * 0
