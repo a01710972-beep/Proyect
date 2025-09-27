@@ -39,6 +39,7 @@ devuelve: lista de elementos por orden alfabetico
 """
 while metodo == 1:  
     print("Aquí esta su lista por orden alfabético:" )
+    print("Característica en desarrollo, favor de esperar hasta nuestro siguiente parche.")
     break
       
 
@@ -59,6 +60,7 @@ print(val_5)
 """
 while metodo == 2:  
     print("Aquí esta su lista por tema:" )
+    print("Característica en desarrollo, favor de esperar hasta nuestro siguiente parche.")
     break
 """
 Tomando el tipo de archivo, estos se classificarán de acuerdo a este
