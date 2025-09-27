@@ -84,6 +84,7 @@ val_5 = 5
 def evalua_resta(para_resta, val_1):
     resultado1 = para_resta - val_1
     return resultado1
+res1 = evalua_resta(para_resta, val_1)
 """
 A los datos que el usuario introduzca se les asigna un valor numérico.
 (uso de operadores)
@@ -95,27 +96,31 @@ devuelve: los valores ordenados de acuerdo a que tan grande es el número final
 def evalua_resta1(para_resta, val_2):
     resultado2 = para_resta - val_2
     return resultado2
+res2 = evalua_resta1(para_resta, val_2)
 
 def evalua_resta2(para_resta, val_3):
     resultado3 = para_resta - val_3
     return resultado3
+res3 = evalua_resta2(para_resta, val_3)
 
 def evalua_resta3(para_resta, val_4):
     resultado4 = para_resta - val_4
     return resultado4    
+res4 = evalua_resta3(para_resta, val_4)
 
 def evalua_resta4(para_resta, val_5):
     resultado5 = para_resta - val_5
     return resultado5
+res5 = evalua_resta4(para_resta, val_5)
 
 """
 Dependiendo del valor de la resta, se clasificará el archivo como "reciente", "hace un rato",
 y "antiguo"
-En este caso: x < 3 
+En este caso: x < 2 
 devuelve: antiguo
-x == 3
+x == 2
 devuelve: hace un rato
-x > 3
+x > 2
 devuelve: reciente
 """
 #NOTA!!!!
@@ -128,15 +133,15 @@ RESET = '\033[0m'
 while metodo == 3:
     print("Aquí esta su lista por tiempo:")
     
-    if val_1 < 3:
+    if res1 > 2:
         print(val_1_, f"{ROJO}antiguo{RESET}")
-    if val_2 < 3:
+    if res2 > 2:
         print(val_2_, f"{ROJO}antiguo{RESET}")
-    if val_3 == 3:
+    if res3 == 2:
         print(val_3_, f"{AZUL}hace un rato{RESET}")
-    if val_4 > 3:
+    if res4 < 2:
         print(val_4_, f"{VERDE}reciente{RESET}")
-    if val_5 > 3:
+    if res5 < 2:
         print(val_5_, f"{VERDE}reciente{RESET}")
     break
 """
@@ -151,8 +156,8 @@ while ans not in ["Y","y","N","n"]:
     ans = input("Lo siento, no entendimos tu respuesta, favor de intentar de nuevo con una respuesta de Y/N: ")
 
 if ans in ["N","n"]:
-    print("Gracias por usar el programa, adiós.")
-   
+    print("Gracias por usar el programa, adiós :D")
+    
 elif ans in ["Y","y"]:
     metodo = 0
     while metodo == 0:
