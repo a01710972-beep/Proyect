@@ -8,10 +8,9 @@ siempre y cuando este tenga en su terminación el tema de este (ej. escuela, tra
 Al final, el usuario debería poder buscar sus archivos previamente guardados por cualquiera
 de los 3 métodos existentes. 
 """
-#bibliotecas
 
 print("Hola, buen día, hoy filtraremos tus archivos por ti :) \n")
-print("NOTA: Favor de escribir el nombre de cada archivo sin utilizar números")
+print("NOTA: Favor de escribir el nombre de cada archivo sin utilizar números y con un espacio escribir al final el tipo de archivo, en este caso manejaremos: \nTrabajo, Escuela y Personal.\nCualquier otra entrada no será validada")
 archivo_1 = str(input("Por favor escriba el nombre de su primer archivo: "))
 archivo_2 = str(input("Por favor escriba el nombre de su segundo archivo: "))
 archivo_3 = str(input("Por favor escriba el nombre de su tercer archivo: "))
@@ -43,6 +42,8 @@ if metodo_usuario == 1:
 """
 ================= Funciones de filtrado por tema =================
 """
+lista_temas = ["Trabajo", "Escuela", "Personal"]
+
 if metodo_usuario == 2:  
     print("\n Aquí esta su lista por tema:" )
     print("Característica en desarrollo, favor de esperar hasta nuestro siguiente parche.")
@@ -101,7 +102,7 @@ VERDE = '\033[32m'
 RESET = '\033[0m'
 
 if metodo_usuario == 3:
-    print("\n Aquí esta su lista por tiempo:\n")
+    print("\n Aquí esta su lista por tiempo:")
     
     if res1 > 2:
         print(archivo_1, f"{ROJO}antiguo{RESET}")
@@ -113,7 +114,7 @@ if metodo_usuario == 3:
         print(archivo_4, f"{VERDE}reciente{RESET}")
     if res5 < 2:
         print(archivo_5, f"{VERDE}reciente{RESET}")
-
+        
 """
 ======================================================================================================
 """
@@ -134,7 +135,7 @@ elif ans in ["Y","y"]:
     while metodo_usuario == 0:
         metodo_usuario = int(input("¿Qué método desea utilizar esta vez? (1), (2), o (3)? "))
         if metodo_usuario in [1,2,3]:
-            print("Lo sentimos, esta acción aun no esta disponible, esperamos que esta caracteristica este disponible en nuestro siguiente parche, gracias por su comprensión :)")       
+            print("Lo sentimos, esta acción aun no esta disponible. Por el momento esperaos este DEMO hay sido de su agrado y esperamos tenga un buen día :)")       
         elif metodo_usuario not in [1,2,3]:
             print("No se ha seleccionado una opción valida. Favor de intentar de nuevo.")
             metodo_usuario = metodo_usuario * 0
