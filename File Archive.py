@@ -10,58 +10,43 @@ de los 3 métodos existentes.
 """
 #bibliotecas
 
-print("Hola, buen día, hoy filtraremos tus archivos por ti :)")
+print("Hola, buen día, hoy filtraremos tus archivos por ti :) \n")
+print("NOTA: Favor de escribir el nombre de cada archivo sin utilizar números")
+archivo_1 = str(input("Por favor escriba el nombre de su primer archivo: "))
+archivo_2 = str(input("Por favor escriba el nombre de su segundo archivo: "))
+archivo_3 = str(input("Por favor escriba el nombre de su tercer archivo: "))
+archivo_4 = str(input("Por favor escriba el nombre de su cuarto archivo: "))
+archivo_5 = str(input("Por favor escriba el nombre de su quinto archivo: "))
 
-val_1_ = input("Por favor escriba el nombre de su primer archivo: ")
-val_2_ = input("Por favor escriba el nombre de su segundo archivo: ")
-val_3_ = input("Por favor escriba el nombre de su tercer archivo: ")
-val_4_ = input("Por favor escriba el nombre de su cuarto archivo: ")
-val_5_ = input("Por favor escriba el nombre de su quinto archivo: ")
+lista_archivos_usuario = [archivo_1, archivo_2, archivo_3, archivo_4, archivo_5]
 
-print("Elige el número de método por el cual quieres que organizemos tus archivos, las opciones son las siguientes:")
-lista = ("(1) Orden Alfabético", "(2) Orden por tema", "(3) Orden por tiempo")
-for i in lista:
+print("\n Elige el número de método por el cual quieres que organizemos tus archivos, las opciones son las siguientes:")
+lista_metodos = ("(1) Orden Alfabético", "(2) Orden por tema", "(3) Orden por tiempo")
+for i in lista_metodos:
     print(i)
     
-metodo = int(input())
-while metodo not in [1,2,3]:
+metodo_usuario = int(input())
+while metodo_usuario not in [1,2,3]:
     print("No es una opción valida, por favor intente de nuevo")
-    metodo = int(input())
+    metodo_usuario = int(input())
 
 """
 ================= Funciones de filtrado por metodo alfabetico =================
 """
-"""
-Dependiendo de la primera letra del archivo se desplazará la lista de estos
-recibe: val_1 valor string, val_2 valor string, val_3 valor string.
-val_4 valor string, val_5 valor string
-devuelve: lista de elementos por orden alfabetico
-"""
-while metodo == 1:  
-    print("Aquí esta su lista por orden alfabético:" )
-    print("Característica en desarrollo, favor de esperar hasta nuestro siguiente parche.")
-    break
+if metodo_usuario == 1:  
+    print("\n Aquí esta su lista por orden alfabético:" )
+    
+    archivo = lista_archivos_usuario.sort()
+    for archivo in lista_archivos_usuario:
+        print(archivo)
       
-
-"""if val_1  ---       #Aun no se como ponerle que filtre por letra inicial, I'll figure it out eventually
-print(val_1)
-if val_1  ---
-print(val_2)
-if val_1  ---
-print(val_3)
-if val_1  ---
-print(val_4)
-if val_1  ---
-print(val_5)
-"""
-
 """
 ================= Funciones de filtrado por tema =================
 """
-while metodo == 2:  
-    print("Aquí esta su lista por tema:" )
+if metodo_usuario == 2:  
+    print("\n Aquí esta su lista por tema:" )
     print("Característica en desarrollo, favor de esperar hasta nuestro siguiente parche.")
-    break
+
 """
 Tomando el tipo de archivo, estos se classificarán de acuerdo a este
 recibe: val_1 valor string, val_2 valor string, val_3 valor string.
@@ -87,14 +72,7 @@ def evalua_resta(para_resta, val_1):
     resultado1 = para_resta - val_1
     return resultado1
 res1 = evalua_resta(para_resta, val_1)
-"""
-A los datos que el usuario introduzca se les asigna un valor numérico.
-(uso de operadores)
-recibe: val_1 valor númerico, val_2 valor númerico, val_3 valor númerico,
-val_4 valor númerico, val_5 valor númerico
-resta 5 a cada valor
-devuelve: los valores ordenados de acuerdo a que tan grande es el número final
-"""
+
 def evalua_resta1(para_resta, val_2):
     resultado2 = para_resta - val_2
     return resultado2
@@ -115,16 +93,6 @@ def evalua_resta4(para_resta, val_5):
     return resultado5
 res5 = evalua_resta4(para_resta, val_5)
 
-"""
-Dependiendo del valor de la resta, se clasificará el archivo como "reciente", "hace un rato",
-y "antiguo"
-En este caso: x < 2 
-devuelve: antiguo
-x == 2
-devuelve: hace un rato
-x > 2
-devuelve: reciente
-"""
 #NOTA!!!!
 #En la siguiente parte solo investigue como ponerle color al texto, no afecta en nada al programa más allá de darle color al texto
 ROJO = '\033[31m'
@@ -132,27 +100,28 @@ AZUL = '\033[34m'
 VERDE = '\033[32m'
 RESET = '\033[0m'
 
-while metodo == 3:
-    print("Aquí esta su lista por tiempo:")
+if metodo_usuario == 3:
+    print("\n Aquí esta su lista por tiempo:\n")
     
     if res1 > 2:
-        print(val_1_, f"{ROJO}antiguo{RESET}")
+        print(archivo_1, f"{ROJO}antiguo{RESET}")
     if res2 > 2:
-        print(val_2_, f"{ROJO}antiguo{RESET}")
+        print(archivo_2, f"{ROJO}antiguo{RESET}")
     if res3 == 2:
-        print(val_3_, f"{AZUL}hace un rato{RESET}")
+        print(archivo_3, f"{AZUL}hace un rato{RESET}")
     if res4 < 2:
-        print(val_4_, f"{VERDE}reciente{RESET}")
+        print(archivo_4, f"{VERDE}reciente{RESET}")
     if res5 < 2:
-        print(val_5_, f"{VERDE}reciente{RESET}")
-    break
+        print(archivo_5, f"{VERDE}reciente{RESET}")
+
 """
 ======================================================================================================
 """
 
 
-print("Desea intentar organizar sus archivos por otro método? Y/N")
-ans = input("Y/N? ")
+print("\n Desea intentar organizar sus archivos por otro método?")
+print("Y/N?")
+ans = input()
 
 while ans not in ["Y","y","N","n"]:
     ans = input("Lo siento, no entendimos tu respuesta, favor de intentar de nuevo con una respuesta de Y/N: ")
@@ -161,11 +130,11 @@ if ans in ["N","n"]:
     print("Gracias por usar el programa, adiós :D")
     
 elif ans in ["Y","y"]:
-    metodo = 0
-    while metodo == 0:
-        metodo = int(input("¿Qué método desea utilizar esta vez? (1), (2), o (3)? "))
-        if metodo in [1,2,3]:
+    metodo_usuario = 0
+    while metodo_usuario == 0:
+        metodo_usuario = int(input("¿Qué método desea utilizar esta vez? (1), (2), o (3)? "))
+        if metodo_usuario in [1,2,3]:
             print("Lo sentimos, esta acción aun no esta disponible, esperamos que esta caracteristica este disponible en nuestro siguiente parche, gracias por su comprensión :)")       
-        elif metodo not in [1,2,3]:
+        elif metodo_usuario not in [1,2,3]:
             print("No se ha seleccionado una opción valida. Favor de intentar de nuevo.")
-            metodo = metodo * 0
+            metodo_usuario = metodo_usuario * 0
