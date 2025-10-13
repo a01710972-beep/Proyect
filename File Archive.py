@@ -9,8 +9,12 @@ Al final, el usuario debería poder buscar sus archivos previamente guardados po
 de los 3 métodos existentes. 
 """
 
+"""
+================== Inicio ==============================================
+"""
+
 print("Hola, buen día, hoy filtraremos tus archivos por ti :) \n")
-print("NOTA: Favor de escribir el nombre de cada archivo sin utilizar números y con un espacio escribir al final el tipo de archivo, en este caso manejaremos: \nTrabajo, Escuela y Personal.\nCualquier otra entrada no será validada")
+print("NOTA: Favor de escribir el nombre de cada archivo sin utilizar números")
 archivo_1 = str(input("Por favor escriba el nombre de su primer archivo: "))
 archivo_2 = str(input("Por favor escriba el nombre de su segundo archivo: "))
 archivo_3 = str(input("Por favor escriba el nombre de su tercer archivo: "))
@@ -30,7 +34,7 @@ while metodo_usuario not in [1,2,3]:
     metodo_usuario = int(input())
 
 """
-================= Funciones de filtrado por metodo alfabetico =================
+================= Filtrado por metodo alfabetico =================
 """
 if metodo_usuario == 1:  
     print("\n Aquí esta su lista por orden alfabético:" )
@@ -40,26 +44,35 @@ if metodo_usuario == 1:
         print(archivo)
       
 """
-================= Funciones de filtrado por tema =================
+================= Filtrado por tema ================= 
 """
-lista_temas = ["Trabajo", "Escuela", "Personal"]
-
-if metodo_usuario == 2:  
-    print("\n Aquí esta su lista por tema:" )
-    print("Característica en desarrollo, favor de esperar hasta nuestro siguiente parche.")
-
+if metodo_usuario == 2:
+    print("\nAquí esta su lista por tema:" )
+    
+    lista_temas = [["Trabajo"],
+                   ["Escuela"],
+                   ["Personal"],
+                   ["Sin Asignar"]]
+    
+    print("Te recordamos el nombre de tus archivos para que les asignes un tema: ", lista_archivos_usuario)
+    
+    archivo = lista_archivos_usuario
+    for archivo in lista_archivos_usuario:
+        tema_usuario = input("\nElije la categoría para tus archivos, las opciones son:\n'trabajo (tra)', 'escuela (es)' o 'personal (per)': ")
+    
+        if tema_usuario.lower() == "tra":
+            lista_temas[0].append(archivo)
+        elif tema_usuario.lower() == "es":
+            lista_temas[1].append(archivo)
+        elif tema_usuario.lower() == "per":
+            lista_temas[2].append(archivo)
+        else:
+            lista_temas[3].append(archivo)
+        
+    for tema in lista_temas:
+        print(tema[0], tema[1:])
 """
-Tomando el tipo de archivo, estos se classificarán de acuerdo a este
-recibe: val_1 valor string, val_2 valor string, val_3 valor string.
-val_4 valor string, val_5 valor string
-devuelve: conjunto por palabra clave (ej. trabajo)
-Usar ifs, tipo, 
-if nombre_de_archivo contiene palabra "trabajo"
-cuando el usuario busque por palabra "trabajo"
-print(nombre_de_archivo)
-"""
-"""
-================= Funciones de filtrado por tiempo (números) =================
+================= Filtrado por tiempo (números) =================
 """
 para_resta = 5
 
@@ -102,7 +115,7 @@ VERDE = '\033[32m'
 RESET = '\033[0m'
 
 if metodo_usuario == 3:
-    print("\n Aquí esta su lista por tiempo:")
+    print("\nAquí esta su lista por tiempo:")
     
     if res1 > 2:
         print(archivo_1, f"{ROJO}antiguo{RESET}")
@@ -116,26 +129,26 @@ if metodo_usuario == 3:
         print(archivo_5, f"{VERDE}reciente{RESET}")
         
 """
-======================================================================================================
+=================================== Final =================================================
 """
 
 
-print("\n Desea intentar organizar sus archivos por otro método?")
+print("\nDesea intentar organizar sus archivos por otro método?")
 print("Y/N?")
 ans = input()
 
 while ans not in ["Y","y","N","n"]:
-    ans = input("Lo siento, no entendimos tu respuesta, favor de intentar de nuevo con una respuesta de Y/N: ")
+    ans = input("\nLo siento, no entendimos tu respuesta, favor de intentar de nuevo con una respuesta de Y/N: ")
 
 if ans in ["N","n"]:
-    print("Gracias por usar el programa, adiós :D")
+    print("\nGracias por usar el programa, adiós :D")
     
 elif ans in ["Y","y"]:
     metodo_usuario = 0
     while metodo_usuario == 0:
-        metodo_usuario = int(input("¿Qué método desea utilizar esta vez? (1), (2), o (3)? "))
+        metodo_usuario = int(input("\n¿Qué método desea utilizar esta vez? (1), (2), o (3)? "))
         if metodo_usuario in [1,2,3]:
-            print("Lo sentimos, esta acción aun no esta disponible. Por el momento esperaos este DEMO hay sido de su agrado y esperamos tenga un buen día :)")       
+            print("\nLo sentimos, esta acción estará disponible hasta el lanzamiento official del programa. Por el momento esperamos este DEMO hay sido de su agrado, que tenga un buen día :)")       
         elif metodo_usuario not in [1,2,3]:
             print("No se ha seleccionado una opción valida. Favor de intentar de nuevo.")
             metodo_usuario = metodo_usuario * 0
