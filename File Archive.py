@@ -148,7 +148,7 @@ elif ans in ["Y","y"]:
     while metodo_usuario == 0:
         metodo_usuario = int(input("\n¿Qué método desea utilizar esta vez? (1), (2), o (3)? "))
         if metodo_usuario in [1,2,3]:
-            print("\nLo sentimos, esta acción estará disponible hasta el lanzamiento official del programa. Por el momento esperamos este DEMO hay sido de su agrado, que tenga un buen día :)")       
+            print("\nPues- que mal, esta acción estará disponible hasta el lanzamiento official del programa, ni modo. Por el momento esperamos este DEMO hay sido de su agrado, que tenga un buen día :)")       
         elif metodo_usuario not in [1,2,3]:
             print("No se ha seleccionado una opción valida. Favor de intentar de nuevo.")
             metodo_usuario = metodo_usuario * 0
