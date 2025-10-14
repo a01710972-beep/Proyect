@@ -14,7 +14,7 @@ de los 3 métodos existentes.
 """
 
 print("Hola, buen día, hoy filtraremos tus archivos por ti :) \n")
-print("NOTA: Favor de escribir el nombre de cada archivo sin utilizar números")
+print("NOTA: Favor de escribir el nombre de cada archivo")
 archivo_1 = str(input("Por favor escriba el nombre de su primer archivo: "))
 archivo_2 = str(input("Por favor escriba el nombre de su segundo archivo: "))
 archivo_3 = str(input("Por favor escriba el nombre de su tercer archivo: "))
