@@ -107,26 +107,26 @@ def evalua_resta4(para_resta, val_5):
     return resultado5
 res5 = evalua_resta4(para_resta, val_5)
 
-#NOTA!!!!
-#En la siguiente parte solo investigue como ponerle color al texto, no afecta en nada al programa más allá de darle color al texto
+""" Códigos para darle color al texto """
+
 ROJO = '\033[31m'
 AZUL = '\033[34m'
 VERDE = '\033[32m'
-RESET = '\033[0m'
+NEGRO = '\033[30m'
 
 if metodo_usuario == 3:
     print("\nAquí esta su lista por tiempo:")
     
     if res1 > 2:
-        print(archivo_1, f"{ROJO}antiguo{RESET}")
+        print(archivo_1, f"{ROJO}antiguo{NEGRO}")
     if res2 > 2:
-        print(archivo_2, f"{ROJO}antiguo{RESET}")
+        print(archivo_2, f"{ROJO}antiguo{NEGRO}")
     if res3 == 2:
-        print(archivo_3, f"{AZUL}hace un rato{RESET}")
+        print(archivo_3, f"{AZUL}hace un rato{NEGRO}")
     if res4 < 2:
-        print(archivo_4, f"{VERDE}reciente{RESET}")
+        print(archivo_4, f"{VERDE}reciente{NEGRO}")
     if res5 < 2:
-        print(archivo_5, f"{VERDE}reciente{RESET}")
+        print(archivo_5, f"{VERDE}reciente{NEGRO}")
         
 """
 =================================== Final =================================================
@@ -152,3 +152,24 @@ elif ans in ["Y","y"]:
         elif metodo_usuario not in [1,2,3]:
             print("No se ha seleccionado una opción valida. Favor de intentar de nuevo.")
             metodo_usuario = metodo_usuario * 0
+            
+"""           
+============== Investigación ===============
+"""
+
+#Colores
+"""
+Para poder dar fomato de color se debe introducir el inicio '\033, seguido de un [ y se debe introducir un número, el número que se introduzca representa un color. En la página viene una lista con el número para cada color,
+por ejemplo el rojo tiene el número asignado de 31, azul 34, etc. Una vez hacemos esto debemos finalizar anotando una m' y al haber guardado los coloes en valores, puedo llamar a cada color sin tener que repetir
+el código una y otra vez.
+Dar color a las salidas en la consola. (2025, October 14). Blogspot.com. https://python-para-impacientes.blogspot.com/2016/09/dar-color-las-salidas-en-la-consola.html
+"""
+
+#'In' y 'Not in'
+"""
+In y Not in, se utilizan para verificar datos dentro de una lista, en el caso de mi proyecto, la lista son las opciones que quiero que se tomen en consideración para saber si el programa actua o no, marcando estos como una lista
+de opciones al introducirlos dentro de corchetes [], una vez que esta generada la lista de opciones, uso la funcion de in o not in para que verifique si el dato que introduzca el usuario esta dentro del rango creado en la lista y
+pueda realizar differentes acciones dependiendo de esto. Por ejemplo, cuando se le pide al usuario una respuesta de Y o N, hago uso de in ["N", "n"] para que si la respuesta del usurio esta en mínuscula o mayúscula, el programa actue,
+pero si la respuesta del usuario no es una de Y o N, hice uso de not in[] para que devuelva un "error" y pida al usuario que introduzca un dato que si sea válido.
+TechNesis. (2024, 16 agosto). Python - 27 Usos de los operadores IN y NOT IN [Vídeo]. YouTube. https://www.youtube.com/watch?v=EmYWXh8P5h8
+"""
