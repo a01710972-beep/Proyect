@@ -175,3 +175,12 @@ pero si la respuesta del usuario no es una de Y o N, hice uso de not in[] para q
 Referencia:
 TechNesis. (2024, 16 agosto). Python - 27 Usos de los operadores IN y NOT IN [Vídeo]. YouTube. https://www.youtube.com/watch?v=EmYWXh8P5h8
 """
+
+#.sort()
+"""
+Python cuenta con 2 funciones que nos permiten ordenar los valores dentro de una lista, sorted() y .sort(), la diferencia es que sorted() crea una lista nueva mientras que .sort solo modifica una lista existente,
+estas funciones ya estan configuradas para ordenar texto por metódo alfabético y números de forma descendiente a ascendiente, existen formas de invertir el orden, crear llaves y más con esta función para que relice tareas más complejas.
+Referencias:
+What is the difference between list.sort() and sorted() in Python? (2021, June 12). 30secondsofcode.org; Angelos Chalaris. https://www.30secondsofcode.org/python/s/sortedlist-vs-list-sort/
+Navarro, A. (2023, June 21). Ordenamiento de listas en Python - Junco TIC. Junco TIC. https://juncotic.com/ordenamiento-de-listas-en-python/
+"""
