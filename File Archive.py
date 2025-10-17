@@ -13,7 +13,7 @@ de los 3 métodos existentes.
 ================== Inicio ==============================================
 """
 
-print("Hola, buen día, hoy filtraremos tus archivos por ti :) \n")
+print("Hola, buen día, hoy filtraremos tus archivos por ti :)4 \n")
 
 archivo_1 = str(input("Por favor escriba el nombre de su primer archivo: "))
 archivo_2 = str(input("Por favor escriba el nombre de su segundo archivo: "))
@@ -21,13 +21,19 @@ archivo_3 = str(input("Por favor escriba el nombre de su tercer archivo: "))
 archivo_4 = str(input("Por favor escriba el nombre de su cuarto archivo: "))
 archivo_5 = str(input("Por favor escriba el nombre de su quinto archivo: "))
 
+"""Se le pide al usuario que nombre 5 archivos y estos se guiardan dentro de una lista, una vez guardados, se le pedirá al usuario que eliga un
+método para organizar sus archivos"""
+
 lista_archivos_usuario = [archivo_1, archivo_2, archivo_3, archivo_4, archivo_5]
 
-print("\n Elige el número de método por el cual quieres que organizemos tus archivos, las opciones son las siguientes:")
+print("\n Elige el NÚMERO de método por el cual quieres que organizemos tus archivos, las opciones son las siguientes:")
 lista_metodos = ("(1) Orden Alfabético", "(2) Orden por tema", "(3) Orden por tiempo")
 for i in lista_metodos:
     print(i)
     
+"""En caso de que el usuario no de un número de método valido, se le pedira una y otra vez que vuelva a esribir su respuesta hasta
+que escriba un número de opción valida para poder continuar"""
+
 metodo_usuario = int(input())
 while metodo_usuario not in [1,2,3]:
     print("No es una opción valida, por favor intente de nuevo")
@@ -38,7 +44,8 @@ while metodo_usuario not in [1,2,3]:
 """
 if metodo_usuario == 1:  
     print("\n Aquí esta su lista por orden alfabético:" )
-    
+
+    """Usando .sort(), podemos hacer que la lista que creamos previamente con los nombres que dio el usuario se organizen de forma automática"""
     archivo = lista_archivos_usuario.sort()
     for archivo in lista_archivos_usuario:
         print(archivo)
@@ -49,6 +56,7 @@ if metodo_usuario == 1:
 if metodo_usuario == 2:
     print("\nAquí esta su lista por tema:" )
     
+    """Haciendo uso de las listas anidadas, creamos una lista que contenga otras listas, en este caso los temas, con el fin de asignar cada archivo a un tema"""
     lista_temas = [["Trabajo"],
                    ["Escuela"],
                    ["Personal"],
@@ -56,10 +64,12 @@ if metodo_usuario == 2:
     
     print("Te recordamos el nombre de tus archivos para que les asignes un tema: ", lista_archivos_usuario)
     
+    """Aquí, al usuario se le pedirá que le asigne una categoría de las disponibles a cada uno de sus archivos e incluso se le muestran nuevamente para facilitar la clasificación"""
     archivo = lista_archivos_usuario
     for archivo in lista_archivos_usuario:
         tema_usuario = input("\nElije la categoría para tus archivos, las opciones son:\n'trabajo (tra)', 'escuela (es)' o 'personal (per)': ")
-    
+        
+    """Ya que el usuario asignó las categorías a cada archivo, los archivos son añadidos a las listas para poderse imprimir con su tema correspondiente"""
         if tema_usuario.lower() == "tra":
             lista_temas[0].append(archivo)
         elif tema_usuario.lower() == "es":
@@ -74,6 +84,8 @@ if metodo_usuario == 2:
 """
 ================= Filtrado por tiempo (números) =================
 """
+
+"""Se realizan operaciones para luego poder organizar nuestros archivos"""
 para_resta = 5
 
 val_1 = 1
@@ -107,7 +119,7 @@ def evalua_resta4(para_resta, val_5):
     return resultado5
 res5 = evalua_resta4(para_resta, val_5)
 
-""" Códigos para darle color al texto """
+""" Códigos para darle color al texto, lo guardamos porque no queremo escribir el codigo 28428 veces y es mejor solo llamarlo por ROJO, AZUL, etc. """
 
 ROJO = '\033[31m'
 AZUL = '\033[34m'
@@ -116,7 +128,7 @@ NEGRO = '\033[30m'
 
 if metodo_usuario == 3:
     print("\nAquí esta su lista por tiempo:")
-    
+    """Usando los resultdos de las operaciones anteriores, organizamos cada archivo y este devuelve que tan antiguo o reciente es"""
     if res1 > 2:
         print(archivo_1, f"{ROJO}antiguo{NEGRO}")
     if res2 > 2:
@@ -132,7 +144,8 @@ if metodo_usuario == 3:
 =================================== Final =================================================
 """
 
-
+"""Aquí se da el cierre del programa y damos la ilusión de la libre elcción ya que en esta vida no todo es como queremos, también se obliga al usuario a que de una respuesta entre las que el
+programa acepta y en caso de no hacerlo se repetirá hasta que se de una respuesta valida"""
 print("\nDesea intentar organizar sus archivos por otro método?")
 print("Y/N?")
 ans = input()
@@ -148,7 +161,7 @@ elif ans in ["Y","y"]:
     while metodo_usuario == 0:
         metodo_usuario = int(input("\n¿Qué método desea utilizar esta vez? (1), (2), o (3)? "))
         if metodo_usuario in [1,2,3]:
-            print("\nPues- que mal, esta acción estará disponible hasta el lanzamiento official del programa, ni modo. Por el momento esperamos este DEMO hay sido de su agrado, que tenga un buen día :)")       
+            print("\nPues, lol que mal, esta acción estará disponible hasta el lanzamiento official del programa. Por el momento esperamos este DEMO hay sido de su agrado, que tenga un buen día :)")       
         elif metodo_usuario not in [1,2,3]:
             print("No se ha seleccionado una opción valida. Favor de intentar de nuevo.")
             metodo_usuario = metodo_usuario * 0
