@@ -70,7 +70,7 @@ if metodo_usuario == 2:
             lista_temas[3].append(archivo)
         
     for tema in lista_temas:
-        print(tema[0], tema[1:])
+        print(tema[0], tema[1])
 """
 ================= Filtrado por tiempo (números) =================
 """
