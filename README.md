@@ -27,7 +27,7 @@ Se espera que el programa sea de su agrado.
 Entrega 1:
 Componente: plantea una situación problema que le permite aplicar y demostrar sus conocimientos de programación (avance 1)
 
-Error: hacía falta el código básico, esto se corrigió al añadir un primer avance para el código del programa
+Error: Había escrito de que trataba el poryecto y su proposito pero hacía falta la parte de código, esto se corrigió al añadir un primer avance para el código del programa
 
 Cambio realizado: Empezar con el código
 """
@@ -115,10 +115,13 @@ print("reciente")
 ============ parte principal ===========
 """
 
+Lineas de código con correción:
+Todas las líneas fuerón nuevas
+
 Entrega 2:
 Componente: usa operadores aritméticos de manera eficaz (avance 2)
 
-Error: El código no funcionaba y se mencionaba que no había aritmética, aunque la inclusión de esta si estaba presente por medio de restas, asumo no se tomarón en cuenta debido a que el código no funcionaba
+Error: El código no funcionaba y se mencionaba que no había aritmética, aunque la inclusión de esta si estaba presente por medio de restas dentro de funciones, asumo no se tomarón en cuenta debido a que el código no funcionaba
 
 Cambios: Asegurarme que el código anterios SÍ funcionara y se hace la inclusión de colores
 
@@ -247,10 +250,12 @@ if val_4 > 3:
 if val_5 > 3:
     print(val_5_, f"{VERDE}reciente{RESET}")
 
+Líneas de código con corrección:
+La mayoría de las líneas a partir de:
+==== Funciones de filtrado por tiempo (números) ====
 
 
 
-    
 
 !!!!! Investigación !!!!!
 
