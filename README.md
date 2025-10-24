@@ -17,6 +17,11 @@ Para esto se solicitará como parte del Demo que se introduzca una serie de dato
 
 Se espera que el programa sea de su agrado.
 
+
+
+
+
+
 !!!! Correcciones !!!!
 
 Entrega 1:
@@ -241,6 +246,11 @@ if val_4 > 3:
     print(val_4_, f"{VERDE}reciente{RESET}")
 if val_5 > 3:
     print(val_5_, f"{VERDE}reciente{RESET}")
+
+
+
+
+    
 
 !!!!! Investigación !!!!!
 
