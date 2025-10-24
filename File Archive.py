@@ -13,18 +13,17 @@ de los 3 métodos existentes.
 ================== Inicio ==============================================
 """
 
-print("Hola, buen día, hoy filtraremos tus archivos por ti :)4 \n")
+print("Hola, buen día, hoy filtraremos 5 de tus archivos por ti :) \n")
 
-archivo_1 = str(input("Por favor escriba el nombre de su primer archivo: "))
-archivo_2 = str(input("Por favor escriba el nombre de su segundo archivo: "))
-archivo_3 = str(input("Por favor escriba el nombre de su tercer archivo: "))
-archivo_4 = str(input("Por favor escriba el nombre de su cuarto archivo: "))
-archivo_5 = str(input("Por favor escriba el nombre de su quinto archivo: "))
+lista_archivos_usuario = []
+
+for i in range(5):
+    nombre_archivo = str(input("Por favor escriba el nombre de su archivo: "))
+    lista_archivos_usuario.append(nombre_archivo)
 
 """Se le pide al usuario que nombre 5 archivos y estos se guiardan dentro de una lista, una vez guardados, se le pedirá al usuario que eliga un
 método para organizar sus archivos"""
 
-lista_archivos_usuario = [archivo_1, archivo_2, archivo_3, archivo_4, archivo_5]
 
 print("\n Elige el NÚMERO de método por el cual quieres que organizemos tus archivos, las opciones son las siguientes:")
 lista_metodos = ("(1) Orden Alfabético", "(2) Orden por tema", "(3) Orden por tiempo")
@@ -46,7 +45,7 @@ if metodo_usuario == 1:
     print("\n Aquí esta su lista por orden alfabético:" )
 
     """Usando .sort(), podemos hacer que la lista que creamos previamente con los nombres que dio el usuario se organizen de forma automática"""
-    archivo = lista_archivos_usuario.sort()
+    lista_archivos_usuario.sort()
     for archivo in lista_archivos_usuario:
         print(archivo)
       
@@ -69,7 +68,7 @@ if metodo_usuario == 2:
     for archivo in lista_archivos_usuario:
         tema_usuario = input("\nElije la categoría para tus archivos, las opciones son:\n'trabajo (tra)', 'escuela (es)' o 'personal (per)': ")
         
-    """Ya que el usuario asignó las categorías a cada archivo, los archivos son añadidos a las listas para poderse imprimir con su tema correspondiente"""
+        """Ya que el usuario asignó las categorías a cada archivo, los archivos son añadidos a las listas para poderse imprimir con su tema correspondiente"""
         if tema_usuario.lower() == "tra":
             lista_temas[0].append(archivo)
         elif tema_usuario.lower() == "es":
@@ -86,59 +85,43 @@ if metodo_usuario == 2:
 """
 
 """Se realizan operaciones para luego poder organizar nuestros archivos"""
-para_resta = 5
+valor_para_resta = 5
 
-val_1 = 1
-val_2 = 2
-val_3 = 3
-val_4 = 4
-val_5 = 5
+valores_a_restar = [1,2,3,4,5]
 
-def evalua_resta(para_resta, val_1):
-    resultado1 = para_resta - val_1
-    return resultado1
-res1 = evalua_resta(para_resta, val_1)
+resultados = []
 
-def evalua_resta1(para_resta, val_2):
-    resultado2 = para_resta - val_2
-    return resultado2
-res2 = evalua_resta1(para_resta, val_2)
+def evalua_resta(valor_para_resta, valores_a_restar):
+    return valor_para_resta - valores_a_restar
 
-def evalua_resta2(para_resta, val_3):
-    resultado3 = para_resta - val_3
-    return resultado3
-res3 = evalua_resta2(para_resta, val_3)
-
-def evalua_resta3(para_resta, val_4):
-    resultado4 = para_resta - val_4
-    return resultado4    
-res4 = evalua_resta3(para_resta, val_4)
-
-def evalua_resta4(para_resta, val_5):
-    resultado5 = para_resta - val_5
-    return resultado5
-res5 = evalua_resta4(para_resta, val_5)
+for valor in range(len(valores_a_restar)):
+    resultado = valor_para_resta - valores_a_restar[valor]
+    resultados.append(resultado)
 
 """ Códigos para darle color al texto, lo guardamos porque no queremo escribir el codigo 28428 veces y es mejor solo llamarlo por ROJO, AZUL, etc. """
 
 ROJO = '\033[31m'
 AZUL = '\033[34m'
 VERDE = '\033[32m'
-NEGRO = '\033[30m'
+RESET = '\033[0m'
 
 if metodo_usuario == 3:
     print("\nAquí esta su lista por tiempo:")
-    """Usando los resultdos de las operaciones anteriores, organizamos cada archivo y este devuelve que tan antiguo o reciente es"""
-    if res1 > 2:
-        print(archivo_1, f"{ROJO}antiguo{NEGRO}")
-    if res2 > 2:
-        print(archivo_2, f"{ROJO}antiguo{NEGRO}")
-    if res3 == 2:
-        print(archivo_3, f"{AZUL}hace un rato{NEGRO}")
-    if res4 < 2:
-        print(archivo_4, f"{VERDE}reciente{NEGRO}")
-    if res5 < 2:
-        print(archivo_5, f"{VERDE}reciente{NEGRO}")
+    
+    for i in range(len(lista_archivos_usuario)):
+        archivo = lista_archivos_usuario[i]
+        resultado = resultados[i]
+    
+        et = ""
+        
+        if resultado > 2:
+            et = f"{ROJO}antiguo{RESET}"
+        elif resultado == 2:
+            et = f"{AZUL}hace un rato{RESET}"
+        elif resultado < 2:
+            et = f"{VERDE}reciente{RESET}"
+        
+        print(archivo, et)
         
 """
 =================================== Final =================================================
@@ -161,7 +144,7 @@ elif ans in ["Y","y"]:
     while metodo_usuario == 0:
         metodo_usuario = int(input("\n¿Qué método desea utilizar esta vez? (1), (2), o (3)? "))
         if metodo_usuario in [1,2,3]:
-            print("\nPues, lol que mal, esta acción estará disponible hasta el lanzamiento official del programa. Por el momento esperamos este DEMO hay sido de su agrado, que tenga un buen día :)")       
+            print("\nLo sentimos, esta acción estará disponible hasta el lanzamiento official del programa. Por el momento esperamos este DEMO hay sido de su agrado, que tenga un buen día :)")       
         elif metodo_usuario not in [1,2,3]:
             print("No se ha seleccionado una opción valida. Favor de intentar de nuevo.")
             metodo_usuario = metodo_usuario * 0
