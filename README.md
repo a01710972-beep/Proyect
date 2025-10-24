@@ -243,3 +243,27 @@ if val_5 > 3:
     print(val_5_, f"{VERDE}reciente{RESET}")
 
 !!!!! Investigación !!!!!
+
+Aquí incluyo cosas sobre las que investigue para realizar mi proyecto:
+
+#Colores
+Para poder dar fomato de color se debe introducir el inicio '\033, seguido de un [ y se debe introducir un número, el número que se introduzca representa un color. En la página viene una lista con el número para cada color,
+por ejemplo el rojo tiene el número asignado de 31, azul 34, etc. Una vez hacemos esto debemos finalizar anotando una m' y al haber guardado los coloes en valores, puedo llamar a cada color sin tener que repetir
+el código una y otra vez.
+Referencia:
+Dar color a las salidas en la consola. (2025, October 14). Blogspot.com. https://python-para-impacientes.blogspot.com/2016/09/dar-color-las-salidas-en-la-consola.html
+
+#'In' y 'Not in'
+In y Not in, se utilizan para verificar datos dentro de una lista, en el caso de mi proyecto, la lista son las opciones que quiero que se tomen en consideración para saber si el programa actua o no, marcando estos como una lista
+de opciones al introducirlos dentro de corchetes [], una vez que esta generada la lista de opciones, uso la funcion de in o not in para que verifique si el dato que introduzca el usuario esta dentro del rango creado en la lista y
+pueda realizar differentes acciones dependiendo de esto. Por ejemplo, cuando se le pide al usuario una respuesta de Y o N, hago uso de in ["N", "n"] para que si la respuesta del usurio esta en mínuscula o mayúscula, el programa actue,
+pero si la respuesta del usuario no es una de Y o N, hice uso de not in[] para que devuelva un "error" y pida al usuario que introduzca un dato que si sea válido.
+Referencia:
+TechNesis. (2024, 16 agosto). Python - 27 Usos de los operadores IN y NOT IN [Vídeo]. YouTube. https://www.youtube.com/watch?v=EmYWXh8P5h8
+
+#.sort()
+Python cuenta con 2 funciones que nos permiten ordenar los valores dentro de una lista, sorted() y .sort(), la diferencia es que sorted() crea una lista nueva mientras que .sort() solo modifica una lista existente,
+estas funciones ya estan configuradas para ordenar texto por metódo alfabético y números de forma descendiente a ascendiente, existen formas de invertir el orden, crear llaves y más con esta función para que relice tareas más complejas.
+Referencias:
+What is the difference between list.sort() and sorted() in Python? (2021, June 12). 30secondsofcode.org; Angelos Chalaris. https://www.30secondsofcode.org/python/s/sortedlist-vs-list-sort/
+Navarro, A. (2023, June 21). Ordenamiento de listas en Python - Junco TIC. Junco TIC. https://juncotic.com/ordenamiento-de-listas-en-python/
