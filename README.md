@@ -16,3 +16,11 @@ o abrir en Thonny y dar botón de play.
 Para esto se solicitará como parte del Demo que se introduzca una serie de datos relacionados a asignaturas o trabajos personales los cuales serán clasificados como archivos y el programa los organizará, permitiendo al usuario usar la herramienta de clasificación al introducir una palabra o más que permitan al sistema lanzar una respuesta.
 
 Se espera que el programa sea de su agrado.
+
+========== Correcciones ========
+
+Entrega 1:
+Componente: plantea una situación problema que le permite aplicar y demostrar sus conocimientos de programación (avance 1)
+
+Error: hacía falta el código básico, esto se corrigió al añadir un primer avance para el código del programa
+
